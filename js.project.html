@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>project</title>
+	<script type="text/javascript">
+		function check_detail(){
+
+			var email=document.getElementById('email').value;
+			var password1=document.getElementById('password1').value;
+			var box1 = document.getElementById('box1');
+			var box2 = document.getElementById('box2');
+			
+
+			if(email==""){
+
+
+				document.getElementById("email").style.borderColor="red";
+				box1.innerHTML="Enter your email id";
+				
+			}
+			if(password1==""){
+
+				document.getElementById('password1').style.borderColor="red";
+				box2.innerHTML="Enter your password";
+				
+			}
+			
+			
+		 return false;
+		}
+		function verifly(){
+			
+			var First_name=document.getElementById('First_name').value;
+			var Last_name=document.getElementById('Last_name').value;
+			var mobile_no=document.getElementById('mobile_no').value;
+			var Email_id=document.getElementById('Email_id').value;
+			var password2=document.getElementById('password2').value;
+			
+			var male=document.getElementById('radio_button').checked;
+			var female=document.getElementById('radio_button').checked;
+			var ebox1 = document.getElementById("ebox1");
+			var ebox2 = document.getElementById("ebox2");
+			var ebox3 = document.getElementById("ebox3");
+			var ebox4 = document.getElementById("ebox4");
+			var ebox5 = document.getElementById("ebox5");
+			var ebox7 = document.getElementById("ebox7");
+			if(First_name==""){
+				
+				document.getElementById("First_name").style.borderColor="red";
+				ebox1.innerHTML="Enter your First Name";
+				
+			}
+			if(Last_name==""){
+				
+				document.getElementById("Last_name").style.borderColor="red";
+				ebox2.innerHTML="Enter your Last Name";
+				
+			}
+			if(mobile_no==""){
+				
+				document.getElementById("mobile_no").style.borderColor="red";
+				ebox3.innerHTML="Enter your Mobile no";
+				
+			}
+			if(Email_id==""){
+				
+				document.getElementById("Email_id").style.borderColor="red";
+				ebox4.innerHTML="Enter your E-mail ID";
+				
+			}
+			if(password2==""){
+				
+				document.getElementById("password2").style.borderColor="red";
+				ebox5.innerHTML="Enter your password";
+				
+			}
+			if(male== false && female== false)
+			{
+				
+				ebox7.innerHTML="Please choose your gender";
+			
+			}
+			return false;
+		} 
+		
+	</script>
+	<style type="text/css">
+		.container{
+			margin: 0px;
+			background-color:#edf0f5;
+			float:left;
+
+		}
+
+		.header{
+
+			width:100%;
+			background-color: #3b5998;
+			float:left;
+		}
+		.logo{
+			float:left;
+		}
+		.login{
+			padding-right: 180px;
+			float:right;
+			color:white;
+		}
+		a{
+			color: white;
+		}
+		.row{
+			
+			float:left;
+		}
+		.column1{
+			padding-top: 20px;
+			padding-left: 80px;
+			float:left;
+		}
+		.column2{
+			padding-left: 137px;
+			float:right;
+		}
+		 .text1 {
+			width:232px;
+			height:10px;
+			margin:3px;
+			border-radius:3px;
+			border:groove beige 2px;
+			color:grey;
+			font-size: 18px;
+			padding: 10px;
+		}
+	.text2{
+			
+			width:500px;
+			height:10px;
+			margin:3px;
+			border-radius:3px;
+			border:groove beige 2px;
+			color:grey;
+			font-size: 18px;
+			padding: 10px;
+		}
+		#note{
+			float:left;
+			color:blue;
+			padding: 0px;
+			margin: 0px;
+		
+		}
+		.select{
+			float:left;
+			margin-right:5px;
+		}
+		.submit{
+			width:30%;
+			background-color:green;
+			color: white;
+			padding: 5px;
+			font-size: 15px;
+			border-radius: 8px;
+			border:groove;
+			font-weight: bold;
+		}
+		#radio{
+		padding-top: 20px;
+		font-weight: bold;
+		clear:both;
+	}
+	.button{
+		margin-bottom: 20px;
+	}
+	.ebox{
+		color:red;
+	}		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<img src="images/logo.png">
+					
+			</div>
+			<div class="login">
+				
+						<table class="right">
+							<form method="post" onsubmit="return check_detail();">
+							<tr>
+								<td>
+									<label>E-mail or phone</label>
+									<br>
+									<input type="text" name="email" id="email">
+									<br>
+									<span class="ebox"id="box1"></span>
+									<br>
+									
+									
+									
+								</td>
+								<td>
+								<label>Password</label>
+								<br>
+								<input type="password" name="password1" id="password1">
+								<input type="submit" id="submit" value="LOGIN" >
+								<br>
+								<span class="ebox"id="box2"></span>
+								<a href="http://www.gmail.com" >Forgotten account?</a>
+								</td>
+								
+							</tr>
+							</form>
+						</table>
+												
+					
+			</div>
+		</div>
+		<div class="row">
+			<div class="column1">
+				<h3>Connect with friends and the world around  you on Fcaebook. </h3>
+				<div class="image">
+					<img src="images/connect.png"  />
+				</div>
+				
+			</div>
+			<div class="column2">
+				<h1>Create an account</h1>
+				<h4>It's free and always will be</h4>
+				<table >
+					<tr>
+						<form method="post" onsubmit="return verifly()" >
+						<td>
+							
+							<input type="text" class="text1" id="First_name"name="First name" placeholder="First name">
+							<br>
+							<span class="ebox"id="ebox1"></span>
+							
+						</td >
+						<td>
+							<input type="text" class="text1" id="Last_name" name="Last name" placeholder="Last name" >
+							<br>
+							<span class="ebox"id="ebox2"></span>
+						</td>
+					</tr>
+					<tr >
+						<td colspan="2" >
+							<input type="text" class="text2" name="mobile" id="mobile_no" placeholder="Mobile number" >
+							<br>
+							<span class="ebox"id="ebox3"></span>
+						</td>
+						
+					</tr>
+					<tr>
+						<td colspan="2" >
+							<input type="text" class="text2" name="Email"id="Email_id" placeholder="E-mail Id">
+							<br>
+							<span class="ebox"id="ebox4"></span>
+						</td>
+						
+					</tr>
+					<tr>
+						<td colspan="2" >
+							<input type="password" class="text2" name="password" id="password2" placeholder="password" >
+							<br>
+							<span class="ebox"id="ebox5"></span>
+						</td>
+						
+					</tr>
+				</table>
+				<div class="details">
+					<h4>Birthday</h4>
+					<select class="select" id="birth_date">
+								<option>Day</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+						
+							<select class="select" >
+								<option>Month</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+						
+							<select class="select" >
+								<option>Year</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+							<br>
+							
+						<h5 id="note" >
+							why do I need to provide my<br> date of birth ?</h5>
+						
+							<div id="radio">
+							<input type="radio" id="radio_button" name="female">Female
+							<input type="radio" id="radio_button" name="male">Male
+							</div>
+							<br>
+							<span class="ebox"id="ebox7"></span>
+							
+							
+							<p style="width: 450px">By clicking Create an account.You agree to one <span style="color:blue;">Terms </span>and that you have read our <span style="color:blue;">Date Policy</span>.including our cookie use.</p>
+							<div class="button">
+								<input  class="submit"type="submit" name="create" value="Sign in ">
+
+							</div>
+							
+				
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
